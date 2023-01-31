@@ -19,28 +19,31 @@ body {
     }
 }
 
-header {
+.banner {
     display: flex;
-    flex-wrap: wrap;
+    width: 100vw;
+    background-color: white;
+    height: 50px;
     position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.banner {
-    padding: 0;
-    margin: 0;
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 20px;
+    position: fixed;
+    z-index: 2;
     width: 100vw;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    height: 40px;
+    margin-top: 50px;
 }
 
 a.logo {
-    height: 12px;
-    width: 100px;
+    width: 120px;
     color: inherit;
+    margin-top: 10px;
+    margin-left: 25px;
 }
 
 header a {
@@ -82,4 +85,39 @@ section h1 {
 
 section a {
     color: inherit;
+}
+
+section .buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    color: inherit;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+section .buttons a:first-child{
+    background-color: #444;
+    color: #fff;
+}
+
+section .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+
+@media (min-width: 768px) {
+    section .buttons {
+        margin: 0;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    section .buttons a {
+        width: 264px;
+        height: 40px;
+    }
 }
