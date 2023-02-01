@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 
+
+
 body {
+    scroll-snap-type: y mandatory;
     color: #171a20;
     font-family: 'M PLUS 1', sans-serif;
 }
@@ -21,7 +24,7 @@ body {
 
 .banner {
     display: flex;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     height: 50px;
     position: fixed;
@@ -34,7 +37,6 @@ header {
     grid-template-columns: auto 1fr auto;
     padding: 5px 20px;
     position: fixed;
-    z-index: 2;
     width: 100vw;
     margin-top: 50px;
 }
@@ -61,6 +63,14 @@ header nav.center {
 
 header nav.right {
     text-align: right;
+}
+
+/* .scrollContainer {
+    
+} */
+
+.scrollArea {
+    scroll-snap-align: center;
 }
 
 section {
@@ -106,7 +116,6 @@ section .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100vw;
 }
 
 @media (min-width: 768px) {
@@ -120,4 +129,52 @@ section .buttons {
         width: 264px;
         height: 40px;
     }
+}
+
+aside {
+    position: fixed;
+    transition: right .4s ease;
+    right: -294.2px;
+    width: 294.2px;
+    background-color: white;
+    padding: 40px;  
+    height: 100vh;
+}
+
+aside.active {
+    right: 0px;
+}
+
+aside a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+aside button.close {
+    font-size: 35px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    transition: background-color .1s ease;
+    background-color: rgba(0,0,0,.3);
+    backdrop-filter: blur(4px);
+}
+
+.backdrop.active {
+    display: block;
 }
