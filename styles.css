@@ -7,7 +7,7 @@
 
 
 body {
-    scroll-snap-type: y mandatory;
+    margin: 0;
     color: #171a20;
     font-family: 'M PLUS 1', sans-serif;
 }
@@ -65,12 +65,12 @@ header nav.right {
     text-align: right;
 }
 
-/* .scrollContainer {
-    
-} */
+.scrollContainer {
+    scroll-snap-type: y mandatory;
+}
 
 .scrollArea {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 section {
@@ -133,16 +133,20 @@ section .buttons {
 
 aside {
     position: fixed;
-    transition: right .4s ease;
-    right: -294.2px;
+    right: 0;
+    top: 0;
+    opacity: 0;
     width: 294.2px;
     background-color: white;
     padding: 40px;  
     height: 100vh;
+    pointer-events: none;
+    z-index: 3;
 }
 
 aside.active {
-    right: 0px;
+    opacity:1;
+    pointer-events: all;
 }
 
 aside a {
@@ -167,14 +171,16 @@ aside button.close {
 }
 
 .backdrop {
-    display: none;
     position: fixed;
+    opacity: 0;
     inset: 0;
+    pointer-events: none;
     transition: background-color .1s ease;
     background-color: rgba(0,0,0,.3);
     backdrop-filter: blur(4px);
 }
-
+/* 
 .backdrop.active {
-    display: block;
-}
+    opacity: 1;
+    pointer-events: all;
+} */

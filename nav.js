@@ -1,23 +1,25 @@
-const openMenu = () => {
-    document.querySelector('.backdrop').className = 'backdrop active';
-    document.querySelector('aside').className = 'active';
-}
-
-const closeMenu = () => {
-    document.querySelector('.backdrop').className = 'backdrop';
-    document.querySelector('aside').className = '';
-}
-
-document.getElementById('menuBtn').onclick = e => {
+document.addEventListener('click', e => {
+   
     e.preventDefault();
-    openMenu();
-}
 
-document.querySelector('aside button.close').onClick = e => {
-    closeMenu();
-    console.log('click')
-}
+    const isDropdownButton = e.target.matches("[data-dropdown-button]")
+    if (!isDropdownButton && e.target.closest('[data-dropdown-container]') != null) return
 
-document.querySelector('.backdrop').onClick = e => {
-    closeMenu();
-}
+    let currentDropdown
+    if (isDropdownButton) {
+        currentDropdown = document.querySelector('[data-dropdown]')
+        currentDropdown.classList.toggle('active')
+    }
+
+    // let dropDownBlur
+    // if (isDropdownButton) {
+    //     dropDownBlur = document.querySelector('[data-blur]')
+    //     dropDownBlur.classList.toggle('active')
+    // }
+
+    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+        if (dropdown === currentDropdown) return
+        dropdown.classList.remove('active')
+    })
+
+})
