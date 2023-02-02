@@ -2,7 +2,13 @@
     margin: 0;
 }
 
-.tesla-logo {
-    color: black;
-    width: 50px;
+body {
+    margin: 0;
+    color: #171a20;
+    font-family: 'Figtree', sans-serif;
+}
+
+a.tesla-logo {
+    color: inherit;
+    width: 150px;
 }
