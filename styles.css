@@ -1,5 +1,7 @@
 * {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,7 +10,24 @@ body {
     font-family: 'Figtree', sans-serif;
 }
 
-a.tesla-logo {
+@media (min-width: 900px) {
+    .desktop {
+        display: initial;
+    }
+}
+
+.logo {
+    width: 20vw;
     color: inherit;
-    width: 150px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.dropdown-menu {
+    position: relative;
+    width: 280px;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    background: white;
 }
