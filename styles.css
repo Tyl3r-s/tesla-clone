@@ -66,8 +66,9 @@ header nav.right {
     text-align: right;
 }
 
-.scrollContainer {
+.contentArea {
     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 .scrollArea {
