@@ -153,7 +153,7 @@ aside.active {
     right: 0;
     visibility: visible;
     opacity: 1 ;
-    transition:  right 0.5s, opacity 0.3s, visibility 0.3s ease;
+    transition:  right 0.3s, opacity 0.3s, visibility 0.3s ease;
 }
 
 aside a {
