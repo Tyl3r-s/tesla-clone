@@ -9,7 +9,8 @@
 body {
     margin: 0;
     color: #171a20;
-    font-family: 'M PLUS 1', sans-serif;
+    font-family: 'Figtree', sans-serif;
+    overflow-y: initial;
 }
 
 .desktop {
@@ -132,21 +133,27 @@ section .buttons {
 }
 
 aside {
+    box-shadow: 0 5px 30;
     position: fixed;
     right: 0;
     top: 0;
-    opacity: 0;
+    right: -170.2px;
     width: 294.2px;
     background-color: white;
     padding: 40px;  
     height: 100vh;
-    pointer-events: none;
-    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: right 0.5s, opacity 0.3s, visibility 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
 }
 
 aside.active {
-    opacity:1;
-    pointer-events: all;
+    right: 0;
+    visibility: visible;
+    opacity: 1 ;
+    transition:  right 0.5s, opacity 0.3s, visibility 0.3s ease;
 }
 
 aside a {
@@ -172,15 +179,14 @@ aside button.close {
 
 .backdrop {
     position: fixed;
-    opacity: 0;
     inset: 0;
     pointer-events: none;
-    transition: background-color .1s ease;
-    background-color: rgba(0,0,0,.3);
-    backdrop-filter: blur(4px);
+    transition: 1s;
+    z-index: 99
 }
-/* 
+
 .backdrop.active {
-    opacity: 1;
-    pointer-events: all;
-} */
+    backdrop-filter: blur(4px);
+    background-color: rgba(0,0,0,.3);
+    transition: 1s;
+}
