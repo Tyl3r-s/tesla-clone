@@ -1,0 +1,67 @@
+.desktop {
+    display: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1.0865fr 1.999fr 1.0866fr;
+    position: fixed;
+    width: 100vw;
+    margin-top: 50px;
+    flex-basis: 0;
+    flex-grow: 1;
+    height: 56px;
+}
+
+.tesla-logo {
+    display: flex;
+}
+
+.tds-site-logo-icon {
+    padding-top: 15px;
+    width: 90px;
+}
+
+header a {
+    color: inherit;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+header nav.center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav.center ol {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav.center li {
+    list-style-type: none;
+}
+
+/* nav.center a {
+    padding: 0px 4px;
+} */
+
+header nav.right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav.right a {
+    margin: 0px 8px;
+    padding: 4px 8px;
+   
+}
