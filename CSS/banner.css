@@ -6,6 +6,7 @@
     position: fixed;
     align-items: center;
     justify-content: center;
-    letter-spacing: .7px;
+    letter-spacing: 0.6px;
     font-size: 15px;
+    color: rgb(95, 95, 95)
 }
