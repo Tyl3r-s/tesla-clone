@@ -58,7 +58,27 @@
     }
 
     .dropContainer {
-        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 28.5vw;
+    }
+    
+    .right {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .right-buttons {
+        padding-top: 25px;
+    }
+    
+    .right-buttons a {
+        margin-right: 5.5px;
+    }
+
+    .menuBtn {
+        color: rgba(0, 0, 0, 0.693);
     }
 
     .scrollArea {
