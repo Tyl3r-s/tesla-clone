@@ -4,6 +4,7 @@ document.addEventListener('click', e => {
     const menu = document.querySelector('[data-dropdown]')
     const menuBtn = e.target.matches('[data-dropdown-button]')
     const menuCloseBtn = e.target.matches('[data-close-button]')
+    
 
     // open dropdown menu (click menu button)
     if (menuBtn) {

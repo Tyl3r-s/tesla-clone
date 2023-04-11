@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+section .buttons {
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+section .buttons a {
+    width: 264px;
+    height: 40px;
+}
+
 body {
     margin: 0;
     color: #171a20;
@@ -45,10 +56,15 @@ section .content {
     width: 100%;
     height: 100vh;
     padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-bottom: 8.5vh;
     text-align: center;
     display: grid;
     grid-template-rows: min-content auto min-content;
+}
+
+section .content a {
+    font-weight: 600;
+    margin: 0 2px 0 2px;
 }
 
 section h1 {
@@ -64,18 +80,46 @@ section .buttons a {
     justify-content: center;
     align-items: center;
     background-color: #eee;
-    color: inherit;
+    color: rgba(23, 26, 32, 0.8);
     border-radius: 5px;
     text-decoration: none;
 }
 
 section .buttons a:first-child{
-    background-color: #444;
-    color: #fff;
+    background-color: rgba(23, 26, 32, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 section .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.model-3 {
+    background-image: url('../images/model-3.jpg');
+}
+
+.model-y {
+    background-image: url('../images/model-y.jpg')
+}
+
+.model-s {
+    background-image: url('../images/model-s.jpg')
+}
+
+.model-x {
+    background-image: url('../images/model-x.jpg')
+}
+
+.solar-panels {
+    background-image: url('../images/solarpanels.jpg')
+}
+
+.solar-roof {
+    background-image: url('../images/roof.jpg')
+}
+
+.accessories {
+    background-image: url('../images/accessories.jpg')
 }
