@@ -82,7 +82,6 @@
     }
 
     .scrollArea {
-        height: 80.5vh;
         scroll-snap-align: start;
         background-size: cover;
         background-position: 50% 25%;
@@ -96,7 +95,7 @@
     }
 
     section .content {
-        padding-bottom: 25.5vh;
+        padding-bottom: 5.5vh;
     }
 
     section .content a {
